@@ -1,0 +1,32 @@
+header{
+
+	margin:5px 50px 50px 0px;
+	heigh: 125px;
+	width: 250px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+#seedPhrase {
+	margin: center;
+	text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
