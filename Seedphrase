@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<head>
+	<title>SecureBit</title>
+	 <title>Seed Phrase Generator</title>
+	<link rel="stylesheet" type="text/css" href="css\seedphraase.css">
+</head>
+<body>
+	<header><img alt="SecureBit" src="img/SecureBit.svg"></header>
+	 <div class="container">
+        <h1>Seed Phrase Generator</h1>
+        <p>Save those words. You will enter your wallet using it.</p>
+        <button id="generateBtn">Generate Seed Phrase</button>
+        <p id="seedPhrase"></p>
+    </div>
+    <div class="seedPhraseLines word-container">
+        <div class="line">
+            <p id="word1"></p>
+            <p id="word2"></p>
+            <p id="word3"></p>
+        </div>
+        <div class="line">
+            <p id="word4"></p>
+            <p id="word5"></p>
+            <p id="word6"></p>
+        </div>
+        <div class="line">
+            <p id="word7"></p>
+            <p id="word8"></p>
+            <p id="word9"></p>
+        </div>
+        <div class="line">
+            <p id="word10"></p>
+            <p id="word11"></p>
+            <p id="word12"></p>
+        </div>
+    </div>
+    <script src="js\Seedphrase.js"></script>
+   
+
+</body>
