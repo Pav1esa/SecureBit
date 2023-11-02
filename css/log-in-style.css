@@ -1,0 +1,135 @@
+/* log-in-style.css */
+
+/* Reset default margin and padding */
+body, h1, p, button, a, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #006587cf;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    text-align: left; /* Align text to the left */
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center vertically within the header */
+    justify-content: space-between; /* Space elements horizontally */
+    border-radius: 15px; /* Apply rounded corners to the header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: all 0.3s ease; /* Add smooth transition to all properties */
+}
+
+header img {
+    width: 350px; /* Set the desired width for the logo */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 10px; /* Add spacing between the logo and text */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #006587cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 50 ease;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav-links {
+    
+    list-style: none;
+    display: flex;
+    flex-grow: 1; /* Grow and fill the available space evenly */
+    margin-left: 20px; /* Add some space between the logo and navigation links */
+}
+
+.nav-links li {
+    margin-top: 20px;
+    margin-right: 150px;
+    
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px; /* Add padding to create button-like appearance */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #006587cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 50 ease;
+}
+
+.nav-links a:hover {
+    background-color: #004080; /* Darker background color on hover */
+}
+
+/* Style the main content */
+.center-container {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.second {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style the unordered list */
+ul {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.str {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style the button */
+.button {
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #006587cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 50 ease;
+}
+
+.button:hover {
+    background-color: #008782cf;
+}
+
+/* Apply styles to the visible button */
+.button-container.visible {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}

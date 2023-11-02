@@ -14,7 +14,7 @@ body {
 
 /* Style the header */
 header {
-    background-color: #007bff;
+    background-color: #006587cf;
     color: white;
     margin: 10px;
     padding: 10px;
@@ -27,6 +27,56 @@ header {
     transition: all 0.3s ease; /* Add smooth transition to all properties */
 }
 
+header img {
+    width: 350px; /* Set the desired width for the logo */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 10px; /* Add spacing between the logo and text */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #006587cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 50 ease;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav-links {
+    
+    list-style: none;
+    display: flex;
+    flex-grow: 1; /* Grow and fill the available space evenly */
+    margin-left: 20px; /* Add some space between the logo and navigation links */
+}
+
+.nav-links li {
+    margin-top: 12px;
+    margin-right: 130px;
+    
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px; /* Add padding to create button-like appearance */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #006587cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 50 ease;
+}
+
+.nav-links a:hover {
+    background-color: #004080; /* Darker background color on hover */
+}
 /* Style the logo to make it smaller */
 header img {
     width: 350px; /* Set the desired width for the logo */
@@ -61,7 +111,9 @@ header img {
 
     font-size: 20px; /* Set the font size for the words */
     margin-right: 5px; /* Add spacing between words */
-    background-color: #007bff; /* Background color for words */
+    background-color: #006587cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 50 ease; /* Background color for words */
     color: white; /* Text color for words */
     padding: 10px 5px; /* Padding inside the words */
     border-radius: 5px; /* Rounded corners for words */
@@ -71,18 +123,27 @@ header img {
 .seedPhraseLines {
     text-align: center;
     margin-top: 20px;
+    
 }
 
 /* Style individual lines */
 .line {
     display: flex;
     justify-content: space-around;
+    border-radius: 15px;
     margin-bottom: 10px;
+    background-color: #34add5cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 50 ease;
+    
 }
 
 .line p {
+    margin-top: 10px;
     font-size: 18px;
-    background-color: #007bff;
+    background-color: #006587cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 50 ease;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -110,7 +171,9 @@ h1 {
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px; /* Apply rounded corners to the button */
-    transition: all 0.3s ease; /* Add smooth transition to all properties */
+    background-color: #006587cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 50 ease;
 }
 
 /* Style the Seed Phrase lines */
