@@ -83,25 +83,69 @@ nav {
     text-align: center;
     margin: 20px;
     padding: 20px;
+    color: white;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.center-container .ul {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #006587cf;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 50 ease;
+}
+.center-container .str {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #4daece82;
+    text-decoration: white;
+    border-radius: 10px;
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: all 50 ease;
+}
+
 .main {
+    margin: 20px; /* Apply 20px margin on all sides */
+    padding: 10px;
     font-size: 24px;
     margin-bottom: 20px;
+    background-color: #4daece82;
+        border-radius: 10px;
+        text-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: all 50 ease;
 }
 
 .second {
     font-size: 18px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin: 20px; /* Apply 20px margin on all sides */
+    background-color: #4daece82;
+    border-radius: 3px;
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: all 50 ease;
+    
+}
+.first-container{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    background-color: #006587cf;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Style the unordered list */
 ul {
     text-align: left;
     margin-bottom: 20px;
+    list-style-type: none;
 }
 
 .str {
