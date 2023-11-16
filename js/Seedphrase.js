@@ -30,3 +30,10 @@ generateBtn.addEventListener("click", () => {
     // Show the word containers after generating the seed phrase
     document.querySelector('.word-container').classList.add('visible');
 });
+
+const confirmBtn = document.getElementById("confirmBtn");
+
+confirmBtn.addEventListener("click", () => {
+    const generatedSeedPhrase = generateSeedPhrase();
+    window.location.href = "mainpage.html";
+});
