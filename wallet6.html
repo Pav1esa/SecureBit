@@ -195,7 +195,17 @@
 <div id="content" class="container">
     <h2>Welcome to Crypto Wallet!</h2>
     <p>Select an option from the menu above.</p>
+
+    <!-- Add a section for cryptocurrency charts -->
+    <div id="cryptoCharts">
+        <canvas id="bitcoinChart" width="400" height="200"></canvas>
+        <canvas id="ethereumChart" width="400" height="200"></canvas>
+        <canvas id="solanaChart" width="400" height="200"></canvas>
+        <canvas id="avalancheChart" width="400" height="200"></canvas>
+    </div>
 </div>
+
+
 
 <!-- Display Balance -->
 <div class="container" id="balanceContainer" style="display: none;">
@@ -218,12 +228,9 @@
 <div class="container" id="receiveContainer" style="display: none;">
     <h2>Your Receive Address:</h2>
     <p id="receiveAddress">Your Ethereum Address</p>
-    <div id="qrcode-container">
-        <div id="qrcode"></div>
-    </div>
+    <div id="qrcode"></div>
     <button class="custom-button" onclick="generateQRCode()">Generate QR Code</button>
 </div>
-
 
 <!-- Transaction History -->
 <div class="container" id="historyContainer" style="display: none;">
@@ -232,6 +239,7 @@
 </div>
 
 <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
     let balance = 0;
@@ -388,6 +396,72 @@ function confirmSend() {
             qrCodeGenerated = true;
         }
     }
+     // Function to fetch cryptocurrency data and create charts
+    async function loadCryptoCharts() {
+        const bitcoinData = await fetchCryptoData('bitcoin');
+        const ethereumData = await fetchCryptoData('ethereum');
+        const solanaData = await fetchCryptoData('solana');
+        const avalancheData = await fetchCryptoData('avalanche');
+
+        createChart('bitcoinChart', 'Bitcoin Price', bitcoinData);
+        createChart('ethereumChart', 'Ethereum Price', ethereumData);
+        createChart('solanaChart', 'Solana Price', solanaData);
+        createChart('avalancheChart', 'Avalanche Price', avalancheData);
+    }
+
+    // Function to fetch cryptocurrency data from an API
+     // JavaScript-код
+    async function loadCryptoCharts() {
+        const bitcoinData = await fetchCryptoData('bitcoin');
+        const ethereumData = await fetchCryptoData('ethereum');
+        const solanaData = await fetchCryptoData('solana');
+        const avalancheData = await fetchCryptoData('avalanche');
+
+        createChart('bitcoinChart', 'Bitcoin Price', bitcoinData);
+        createChart('ethereumChart', 'Ethereum Price', ethereumData);
+        createChart('solanaChart', 'Solana Price', solanaData);
+        createChart('avalancheChart', 'Avalanche Price', avalancheData);
+    }
+
+    // Function to fetch cryptocurrency data from an API
+async function fetchCryptoData(crypto) {
+    const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${crypto}&vs_currencies=usd`);
+    const data = await response.json();
+    return data[crypto].usd;
+}
+
+
+    function createChart(canvasId, label, data) {
+        const ctx = document.getElementById(canvasId).getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1D', '1W', '1M', '3M', '1Y'],
+                datasets: [{
+                    label: label,
+                    data: [data, data * 1.2, data * 1.5, data * 0.8, data * 2],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    }
+
+    async function fetchCryptoData(crypto) {
+        const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${crypto}&vs_currencies=usd`);
+        const data = await response.json();
+        return data[crypto].usd;
+    }
+
+    loadCryptoCharts();
 </script>
 
 </body>
