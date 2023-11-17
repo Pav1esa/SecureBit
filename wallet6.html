@@ -143,27 +143,32 @@
         display: none;
     }
 
-  #qrcode {
-    margin: 15px auto; /* Додаємо автоматичні маржі, щоб центрувати */
-    display: block; /* Забезпечуємо блоковий вивід для центрування */
-    text-align: center; /* Центруємо вміст по горизонталі */
-    line-height: 0; /* Виправлення для вирівнювання по вертикалі */
+    #qrcode {
+    margin: 15px auto; /* Keep the margin for spacing */
+    display: block;
+    text-align: center;
+    line-height: 0;
+    display: flex;
+    justify-content: center; /* Center the QR code horizontally */
+    align-items: center; /* Center the QR code vertically */
+    height: 200px; /* Set the desired height for the QR code container */
 }
 
-    #generateQRCodeButton {
-        background: linear-gradient(45deg, #3498db, #2c3e50);
-        color: white;
-        padding: 10px 20px;
-        font-size: 18px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
+#generateQRCodeButton {
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
 
-    #generateQRCodeButton:hover {
-        background: linear-gradient(45deg, #2c3e50, #3498db);
-    }
+#generateQRCodeButton:hover {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+}
+
 
     /* Змінюємо колір тексту для білого фону */
     label {
