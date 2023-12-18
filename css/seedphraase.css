@@ -1,88 +1,60 @@
-/* seedphrase.css */
-
-/* Reset default margin and padding */
-body, h1, p, button {
+body, h1, p, button, a, ul, li {
     margin: 0;
     padding: 0;
 }
 
-/* Apply a background color to the body */
 body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    color: #000000;
+    text-align: center;
+    transition: background 0.5s ease;
 }
 
-/* Style the header */
 header {
-    background-color: #006587cf;
-    color: white;
-    margin: 10px;
-    padding: 10px;
-    text-align: left; /* Align text to the left */
-    display: flex; /* Use flexbox layout */
-    align-items: center; /* Center vertically within the header */
-    justify-content: space-between; /* Space elements horizontally */
-    border-radius: 15px; /* Apply rounded corners to the header */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: all 0.3s ease; /* Add smooth transition to all properties */
+    position: relative;
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    color: #fff;
+    padding: 20px;
+    font-size: 28px;
+    border-bottom: 2px solid #fff;
 }
-
-header img {
-    width: 350px; /* Set the desired width for the logo */
-    height: auto; /* Maintain the aspect ratio */
-    margin-right: 10px; /* Add spacing between the logo and text */
-    border-radius: 5px; /* Add rounded corners */
-    background-color: #006587cf;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 50 ease;
-}
-
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-bottom: 2px solid #fff;
 }
 
-.nav-links {
-    
-    list-style: none;
-    display: flex;
-    flex-grow: 1; /* Grow and fill the available space evenly */
-    margin-left: 20px; /* Add some space between the logo and navigation links */
+
+.logo {
+    padding-right: 170px ;
+    width: auto;
+    height: 50px; /* Adjust the size as needed */
+     /* Add some space between the logo and links */
+    cursor: pointer;
 }
 
-.nav-links li {
-    margin-top: 12px;
-    margin-right: 130px;
-    
-}
-
-.nav-links li:last-child {
-    margin-right: 0;
-}
-
-.nav-links a {
+nav a {
+    position: center;
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px; /* Add padding to create button-like appearance */
-    border-radius: 5px; /* Add rounded corners */
-    background-color: #006587cf;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 50 ease;
+    display: block;
+    margin:  0 20px 0 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.nav-links a:hover {
-    background-color: #004080; /* Darker background color on hover */
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
-/* Style the logo to make it smaller */
-header img {
-    width: 350px; /* Set the desired width for the logo */
-    height: auto; /* Maintain the aspect ratio */
-    margin-right: 10px; /* Add spacing between the logo and text */
-}
+
 
 
 /* Center content in the container */
@@ -164,35 +136,39 @@ h1 {
 
 /* Style the Generate Seed Phrase button */
 #generateBtn {
-    background-color: #007bff;
+    margin-top:15px ;
     color: white;
+    font-weight: bold;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
     cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px; /* Apply rounded corners to the button */
-    background-color: #006587cf;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 50 ease;
+    border-radius: 8px;
+    text-decoration: none;
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 #confirmBtn {
-    background-color: #006587cf;
     color: white;
+    font-weight: bold;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
     cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px; /* Apply rounded corners to the button */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease; /* Add smooth transition to all properties */
+    border-radius: 8px;
+    text-decoration: none;
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 #generateBtn:hover {
-    background-color: #004080; /* Darker background color on hover */
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 #confirmBtn:hover {
-    background-color: #004080; /* Darker background color on hover */
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Style the Seed Phrase lines */
@@ -204,9 +180,15 @@ h1 {
 
 /* Apply styles to individual lines */
 .seedPhraseLines p {
-    font-size: 18px;
-    margin-bottom: 10px;
-    transition: all 0.3s ease; /* Add smooth transition to all properties */
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -215,6 +197,7 @@ h1 {
         padding: 10px;
     }
     .container .word {
-        font-size: 14px; /* Adjust font size for smaller screens if necessary */
+        font-size: 14px;
+         /* Adjust font size for smaller screens if necessary */
     }
 }
