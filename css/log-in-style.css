@@ -1,151 +1,68 @@
-/* log-in-style.css */
-
-/* Reset default margin and padding */
-body, h1, p, button, a, ul, li {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    color: #fff;
+    text-align: center;
+    transition: background 0.5s ease;
 }
 
-/* Apply a background color to the body */
-body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-}
-
-/* Style the header */
 header {
-    background-color: #006587cf;
-    color: white;
-    margin: 10px;
-    padding: 10px;
-    text-align: left; /* Align text to the left */
-    display: flex; /* Use flexbox layout */
-    align-items: center; /* Center vertically within the header */
-    justify-content: space-between; /* Space elements horizontally */
-    border-radius: 15px; /* Apply rounded corners to the header */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: all 0.3s ease; /* Add smooth transition to all properties */
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    color: #fff;
+    padding: 20px;
+    font-size: 28px;
+    border-bottom: 2px solid #fff;
 }
 
-header img {
-    width: 350px; /* Set the desired width for the logo */
-    height: auto; /* Maintain the aspect ratio */
-    margin-right: 10px; /* Add spacing between the logo and text */
-    border-radius: 5px; /* Add rounded corners */
-    background-color: #006587cf;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 50 ease;
+h1 {
+    margin: 0;
 }
-
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-bottom: 2px solid #fff;
 }
 
-.nav-links {
-    
-    list-style: none;
-    display: flex;
-    flex-grow: 1; /* Grow and fill the available space evenly */
-    margin-left: 20px; /* Add some space between the logo and navigation links */
-}
-
-.nav-links li {
-    margin-top: 20px;
-    margin-right: 150px;
-    
-}
-
-.nav-links li:last-child {
-    margin-right: 0;
-}
-
-.nav-links a {
+nav a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px; /* Add padding to create button-like appearance */
-    border-radius: 5px; /* Add rounded corners */
-    background-color: #006587cf;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 50 ease;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block; /* Make the links inline-block to display horizontally */
 }
 
-.nav-links a:hover {
-    background-color: #004080; /* Darker background color on hover */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Style the main content */
 .center-container {
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    color: white;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
 }
 
-.center-container .ul {
+.first-container {
     text-align: center;
-    margin: 20px;
-    padding: 20px;
-    background-color: #006587cf;
-    
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: all 50 ease;
-}
-.center-container .str {
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    background-color: #4daece82;
-    text-decoration: white;
-    border-radius: 10px;
-    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    transition: all 50 ease;
 }
 
 .main {
-    margin: 20px; /* Apply 20px margin on all sides */
-    padding: 10px;
     font-size: 24px;
-    margin-bottom: 20px;
-    background-color: #4daece82;
-        border-radius: 10px;
-        text-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    transition: all 50 ease;
 }
 
 .second {
     font-size: 18px;
-    padding: 10px;
-    margin: 20px; /* Apply 20px margin on all sides */
-    background-color: #4daece82;
-    border-radius: 3px;
-    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    transition: all 50 ease;
-    
-}
-.first-container{
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    color: white;
-    background-color: #006587cf;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the unordered list */
-ul {
-    text-align: left;
-    margin-bottom: 20px;
-    list-style-type: none;
+.ul {
+    list-style-type: circle;
+    padding: 0;
 }
 
 .str {
@@ -153,27 +70,23 @@ ul {
     margin-bottom: 10px;
 }
 
-/* Style the button */
+.button-container {
+    margin-top: 20px;
+}
+
 .button {
+    background: linear-gradient(45deg, #3498db, #2c3e50);
     color: white;
-    font-weight: bold;
-    border: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-    background-color: #006587cf;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 50 ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .button:hover {
-    background-color: #008782cf;
-}
-
-/* Apply styles to the visible button */
-.button-container.visible {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+   
 }

@@ -35,5 +35,5 @@ const confirmBtn = document.getElementById("confirmBtn");
 
 confirmBtn.addEventListener("click", () => {
     const generatedSeedPhrase = generateSeedPhrase();
-    window.location.href = "mainpage.html";
+    window.location.href = "wallet6.html";
 });
